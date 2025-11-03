@@ -1,0 +1,51 @@
+{
+  "files.exclude": {
+    "**/__pycache__": true,
+    "**/.ruff_cache": true,
+    ".venv": true,
+    ".mypy_cache": true,
+    ".pytest_cache": true,
+  },
+  "explorer.fileNesting.enabled": true,
+  "explorer.fileNesting.expand": false,
+  "explorer.fileNesting.patterns": {
+    "pyproject.toml": ".python-version, uv.lock, Makefile",
+    ".env.example": ".env",
+    "Dockerfile": ".dockerignore, docker-entrypoint.sh"
+  },
+  "python.terminal.activateEnvironment": true,
+  "ruff.enable": true,
+  "python.linting.enabled": false,
+  // prefer repo pyproject.toml / ruff.toml over VS Code settings
+  "ruff.configurationPreference": "filesystemFirst",
+  "[python]": {
+    "editor.tabSize": 4,
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+    "editor.defaultFormatter": "charliermarsh.ruff"
+  },
+  "notebook.formatOnSave.enabled": true,
+  "notebook.codeActionsOnSave": {
+    "notebook.source.fixAll": "explicit",
+    "notebook.source.organizeImports": "explicit"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+  },
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features",
+    "editor.formatOnSave": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll": "explicit",
+      "source.organizeImports": "explicit"
+    },
+  },
+}

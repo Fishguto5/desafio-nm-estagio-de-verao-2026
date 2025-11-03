@@ -1,0 +1,37 @@
+[project]
+name = "backend"
+version = "0.1.0"
+description = "Backend API for an AI-powered chatbot, capable of providing well-founded answers about the Unicamp 2026 admission exam"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "fastapi[standard]>=0.120.4",
+    "openai>=2.6.1",
+    "pydantic-settings>=2.11.0",
+    "sqlmodel>=0.0.27",
+    "psycopg2-binary>=2.9.9",
+    "psycopg2>=2.9.11",
+    "authlib>=1.6.5",
+    "itsdangerous>=2.2.0",
+    "python-jose>=3.5.0",
+    "alembic>=1.17.1",
+]
+
+[dependency-groups]
+dev = [
+    "ruff>=0.14.3",
+    "pytest>=8.4.2",
+    "types-authlib>=1.6.5.20251005",
+    "types-python-jose>=3.5.0.20250531",
+    "ty>=0.0.1a25",
+]
+
+[tool.ruff]
+exclude = [
+    "migrations/versions/**",
+]
+
+[tool.ty.src]
+exclude = [
+    "migrations/versions/**",
+]
